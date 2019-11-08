@@ -1,0 +1,5 @@
+<ul>
+  <% @failures.each do |failure| %>
+    <li><%= failure[:name] %>: <%= failure[:percent] %>&percnt; failure rate</li>
+  <% end %>
+</ul>
