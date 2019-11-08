@@ -31,7 +31,7 @@ class BuildkiteFailsController < ApplicationController
 
   def failure_trends
     client = Buildkit.new(token: ENV["BUILDKITE_TOKEN"])
-    organization = client.organization(ENV["BUILDKITE_ORG")
+    organization = client.organization(ENV["BUILDKITE_ORG"])
 
     build_fails = fake_failures
     fails_to_count = build_fails.each_with_object({}) do |failure_log, fails_to_count|
