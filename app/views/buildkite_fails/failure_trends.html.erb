@@ -1,5 +1,17 @@
-<ul>
-  <% @failures.each do |failure| %>
-    <li><%= failure[:name] %>: <%= failure[:percent] %>&percnt; failure rate</li>
-  <% end %>
-</ul>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Test Name</th>
+      <th>Failures</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @failures.each do |failure| %>
+      <tr>
+        <td><%= failure[:name] %></td>
+        <td style="text-align: center; color: #ff0000"><%= failure[:percent] %>&percnt;</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
